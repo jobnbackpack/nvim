@@ -35,7 +35,18 @@ return require('packer').startup(function(use)
       require('orgmode').setup{}
     end
   }
-	
+
+  use {'akinsho/org-bullets.nvim', config = function()
+    require('org-bullets').setup()
+  end}
+
+  use {
+    'lukas-reineke/headlines.nvim',
+    config = function()
+      require('headlines').setup()
+    end,
+  }
+
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
