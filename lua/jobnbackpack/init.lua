@@ -8,4 +8,3 @@ vim.g.lightline = {
 }
 
 require('orgmode').setup_ts_grammar()
-

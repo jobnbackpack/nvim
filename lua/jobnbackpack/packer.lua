@@ -32,7 +32,14 @@ return require('packer').startup(function(use)
 	use('nvim-treesitter/playground')
 
   use {'nvim-orgmode/orgmode', config = function()
-      require('orgmode').setup{}
+      require('orgmode').setup{
+        org_todo_keywords = {'TODO', 'WAITING', '|', 'DONE', 'CANCELED'},
+        org_todo_keyword_faces = {
+          WAITING = ':foreground #537FE7 :weight bold',
+          CANCELED = ':background #FFFFFF :slant italic :underline on',
+        },
+        org_archive_location = '~/Dropbox/org/archive.org',
+      }
     end
   }
 
@@ -40,12 +47,12 @@ return require('packer').startup(function(use)
     require('org-bullets').setup()
   end}
 
-  use {
-    'lukas-reineke/headlines.nvim',
-    config = function()
-      require('headlines').setup()
-    end,
-  }
+  -- use {
+ --   'lukas-reineke/headlines.nvim',
+  --  config = function()
+  --    require('headlines').setup()
+  --  end,
+ -- }
 
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
