@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+  -- Theme && Design
+
 	use({
 		'rose-pine/neovim',
 		as = 'rose-pine',
@@ -20,6 +22,10 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	})
+
+  use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
+
+  use('itchyny/lightline.vim')
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
