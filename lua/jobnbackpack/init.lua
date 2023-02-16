@@ -7,4 +7,3 @@ vim.g.lightline = {
   component_function = { gitbranch = 'FugitiveHead' },
 }
 
-require('orgmode').setup_ts_grammar()

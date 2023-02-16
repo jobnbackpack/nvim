@@ -32,16 +32,9 @@ return require('packer').startup(function(use)
 	use('nvim-treesitter/playground')
 
   use {'nvim-orgmode/orgmode', config = function()
-      require('orgmode').setup{
-        org_todo_keywords = {'TODO', 'WAITING', '|', 'DONE', 'CANCELED'},
-        org_todo_keyword_faces = {
-          WAITING = ':foreground #537FE7 :weight bold',
-          CANCELED = ':background #FFFFFF :slant italic :underline on',
-        },
-        org_archive_location = '~/Dropbox/org/archive.org',
-      }
-    end
-  }
+    require('orgmode').setup{}
+  end
+}
 
   use {'akinsho/org-bullets.nvim', config = function()
     require('org-bullets').setup()
