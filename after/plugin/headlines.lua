@@ -1,0 +1,10 @@
+--im.cmd [[highlight Headline1 guibg=#1e2718]]
+--im.cmd [[highlight Headline2 guibg=#21262d]]
+--im.cmd [[highlight CodeBlock guibg=#1c1c1c]]
+--im.cmd [[highlight Dash guibg=#D19A66 gui=bold]]
+--
+--equire("headlines").setup {
+--   org = {
+--       headline_highlights = { "Headline1", "Headline2" },
+ --   },
+--  }
