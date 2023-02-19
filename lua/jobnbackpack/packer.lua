@@ -19,9 +19,21 @@ return require('packer').startup(function(use)
 		'rose-pine/neovim',
 		as = 'rose-pine',
 		config = function()
-			vim.cmd('colorscheme rose-pine')
+			--vim.cmd('colorscheme rose-pine')
 		end
 	})
+
+  use({
+    'folke/tokyonight.nvim', 
+    config = function ()
+      vim.cmd('colorscheme tokyonight-night')
+    end
+  })
+
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  } 
 
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
 
