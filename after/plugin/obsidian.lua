@@ -1,5 +1,5 @@
 require("obsidian").setup({
-  dir = "~/Documents/Ultimate Starter Vault/",
+  dir = "~/OneDrive - conet.de/Documents/Obsidian/My Home/",
   completion = {
     nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
   },

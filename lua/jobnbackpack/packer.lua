@@ -80,6 +80,9 @@ return require('packer').startup(function(use)
 
   use('epwalsh/obsidian.nvim')
 
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
+
   -- all lsp things
   use {
     'VonHeikemen/lsp-zero.nvim',
