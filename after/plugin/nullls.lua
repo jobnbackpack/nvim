@@ -5,6 +5,14 @@ local event = "BufWritePre" -- or "BufWritePost"
 local async = event == "BufWritePost"
 
 null_ls.setup({
+  sources = {
+    -- format html and markdown
+    null_ls.builtins.formatting.prettierd.with { filetypes = { "html", "typescript", "yaml", "markdown" } },
+    -- markdown diagnostic
+    null_ls.builtins.diagnostics.markdownlint,
+    -- Lua formatting
+    null_ls.builtins.formatting.stylua,
+  },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
       vim.keymap.set("n", "<Leader>f", function()
