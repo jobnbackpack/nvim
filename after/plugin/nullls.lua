@@ -7,7 +7,22 @@ local async = event == "BufWritePost"
 null_ls.setup({
   sources = {
     -- format html and markdown
-    null_ls.builtins.formatting.prettierd.with { filetypes = { "html", "typescript", "scss", "css", "yaml", "markdown" } },
+    null_ls.builtins.formatting.prettierd.with { filetypes = {
+      "css",
+      "graphql",
+      "html",
+      "javascript",
+      "javascriptreact",
+      "json",
+      "less",
+      "markdown",
+      "scss",
+      "typescript",
+      "typescriptreact",
+      "yaml",
+      "vue",
+      "svelte",
+    } },
     -- markdown diagnostic
     null_ls.builtins.diagnostics.markdownlint,
     -- Lua formatting
