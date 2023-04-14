@@ -22,6 +22,7 @@ null_ls.setup({
       "yaml",
       "vue",
       "svelte",
+      "astro",
     } },
     -- markdown diagnostic
     null_ls.builtins.diagnostics.markdownlint,

@@ -17,6 +17,7 @@ prettier.setup({
     "yaml",
     "vue",
     "svelte",
+    "astro",
   },
   ["null-ls"] = {
     condition = function()
