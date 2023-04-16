@@ -7,6 +7,18 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use({
+    'sainnhe/gruvbox-material',
+    as = 'gruvbox-material',
+    config = function()
+      vim.g.gruvbox_material_background = 'hard'
+      vim.g.gruvbox_material_transparent_background = true
+      vim.cmd('colorscheme gruvbox-material')
+    end
+  })
+
+  use('itchyny/lightline.vim')
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     -- or                            , branch = '0.1.x',
@@ -25,10 +37,18 @@ return require('packer').startup(function(use)
 
   use 'ap/vim-css-color'
 
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+    -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+  }
+
   use({
     'folke/tokyonight.nvim',
     config = function()
-      vim.cmd('colorscheme tokyonight-night')
+      -- vim.cmd('colorscheme tokyonight-night')
     end
   })
 
@@ -52,7 +72,6 @@ return require('packer').startup(function(use)
 
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
 
-  use('itchyny/lightline.vim')
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
