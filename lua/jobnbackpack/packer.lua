@@ -98,6 +98,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
 
   use('epwalsh/obsidian.nvim')
+  use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
 
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
