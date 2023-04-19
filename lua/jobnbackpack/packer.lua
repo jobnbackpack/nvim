@@ -86,13 +86,6 @@ return require('packer').startup(function(use)
     require('org-bullets').setup()
   end }
 
-  -- use {
-  --   'lukas-reineke/headlines.nvim',
-  --  config = function()
-  --    require('headlines').setup()
-  --  end,
-  -- }
-
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -100,8 +93,10 @@ return require('packer').startup(function(use)
   use('epwalsh/obsidian.nvim')
   use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
 
-  use('jose-elias-alvarez/null-ls.nvim')
-  use('MunifTanjim/prettier.nvim')
+  use({ 'prettier/vim-prettier', {
+   run = 'yarn install --frozen-lockfile --production',
+   ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html', 'astro'},
+  }})
 
   -- all lsp things
   use {
